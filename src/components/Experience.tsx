@@ -4,6 +4,7 @@ import { Card } from "./ui/card";
 const experiences = [
   {
     company: "Walmart",
+    logo: "/lovable-uploads/walmart-logo.png",
     role: "Software Development Engineer 3",
     period: "Apr 2023 - Present",
     location: "Bangalore, India",
@@ -18,6 +19,7 @@ const experiences = [
   },
   {
     company: "Amazon",
+    logo: "/lovable-uploads/amazon-logo.png",
     role: "Software Development Engineer 1",
     period: "Apr 2022 - Apr 2023",
     location: "Bangalore, India",
@@ -31,6 +33,7 @@ const experiences = [
   },
   {
     company: "Wissen Technology",
+    logo: "/lovable-uploads/wissen-logo.png",
     role: "Associate Software Engineer",
     period: "Jun 2020 - Feb 2022",
     location: "Bangalore, India",
@@ -38,6 +41,19 @@ const experiences = [
       "Worked in Morgan Stanley - Private Wealth Management division",
       "Developed customizable workflows to automate the order lifecycle",
       "Tech Stack: Java, SpringBoot and Batch, Python, Sybase, Db2, IBM mqs, Mockito",
+    ],
+  },
+  {
+    company: "Perpule",
+    logo: "/lovable-uploads/perpule-logo.png",
+    role: "Software Engineering Intern",
+    period: "Jan 2020 - May 2020",
+    location: "Bangalore, India",
+    highlights: [
+      "Worked on UltraPos, a cloud-based point of sale system",
+      "Developed features for inventory management and order processing",
+      "Implemented real-time order tracking and notification system",
+      "Tech Stack: Node.js, React, MongoDB, Redis, AWS",
     ],
   },
 ];
@@ -66,11 +82,18 @@ export const Experience = () => {
               transition={{ delay: index * 0.1, duration: 0.5 }}
               viewport={{ once: true }}
             >
-              <Card className="p-6 backdrop-blur-sm bg-white/50 border border-gray-200">
+              <Card className="p-6 backdrop-blur-sm bg-white/50 border border-gray-200 hover:bg-purple-50 hover:border-purple-200 transform hover:-translate-y-1 transition-all duration-300">
                 <div className="flex flex-wrap justify-between items-start mb-4">
-                  <div>
-                    <h3 className="text-xl font-semibold">{exp.company}</h3>
-                    <p className="text-gray-600">{exp.role}</p>
+                  <div className="flex items-center gap-4">
+                    <img 
+                      src={exp.logo} 
+                      alt={`${exp.company} logo`} 
+                      className="w-12 h-12 object-contain"
+                    />
+                    <div>
+                      <h3 className="text-xl font-semibold">{exp.company}</h3>
+                      <p className="text-gray-600">{exp.role}</p>
+                    </div>
                   </div>
                   <div className="text-right">
                     <p className="text-gray-600">{exp.period}</p>
