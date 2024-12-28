@@ -4,7 +4,7 @@ import { Card } from "./ui/card";
 const experiences = [
   {
     company: "Walmart",
-    logo: "/lovable-uploads/walmart-logo.png",
+    logo: "/lovable-uploads/47be4933-fb28-4c3a-8190-e73f898578ec.png",
     role: "Software Development Engineer 3",
     period: "Apr 2023 - Present",
     location: "Bangalore, India",
@@ -19,7 +19,7 @@ const experiences = [
   },
   {
     company: "Amazon",
-    logo: "/lovable-uploads/amazon-logo.png",
+    logo: "/lovable-uploads/d93c0544-2ba2-43bb-886b-8a437f1e2088.png",
     role: "Software Development Engineer 1",
     period: "Apr 2022 - Apr 2023",
     location: "Bangalore, India",
