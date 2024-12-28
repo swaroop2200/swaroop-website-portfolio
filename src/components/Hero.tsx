@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { Card } from "./ui/card";
+import { Linkedin } from "lucide-react";
 
 export const Hero = () => {
   return (
@@ -44,6 +45,19 @@ export const Hero = () => {
             <p className="text-sm text-gray-600">Phone</p>
             <p className="font-medium">+91-8546989486</p>
           </Card>
+          <a 
+            href="https://www.linkedin.com/in/swaroop-as-836484169/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Card className="p-4 backdrop-blur-sm bg-white/50 border border-gray-200 hover:bg-blue-50 hover:border-blue-200 transform hover:-translate-y-1 transition-all duration-300 cursor-pointer flex items-center gap-2">
+              <Linkedin className="w-5 h-5 text-blue-600" />
+              <div>
+                <p className="text-sm text-gray-600">LinkedIn</p>
+                <p className="font-medium">Connect with me</p>
+              </div>
+            </Card>
+          </a>
         </motion.div>
       </div>
     </section>
