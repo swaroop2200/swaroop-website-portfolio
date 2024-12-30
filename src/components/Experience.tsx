@@ -100,9 +100,11 @@ export const Experience = () => {
                     <p className="text-gray-600">{exp.location}</p>
                   </div>
                 </div>
-                <ul className="list-disc list-inside space-y-2 text-gray-700 ml-4">
+                <ul className="list-disc pl-6 space-y-2">
                   {exp.highlights.map((highlight, i) => (
-                    <li key={i} className="text-left">{highlight}</li>
+                    <li key={i} className="text-gray-700">
+                      <span className="block pl-2">{highlight}</span>
+                    </li>
                   ))}
                 </ul>
               </Card>

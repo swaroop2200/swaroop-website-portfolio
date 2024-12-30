@@ -71,7 +71,7 @@ export const Skills = () => {
                   {category.skills.map((skill) => (
                     <span
                       key={skill}
-                      className="px-3 py-1 bg-gray-100 rounded-full text-sm text-gray-700"
+                      className="px-3 py-1 bg-gray-100 rounded-full text-sm text-gray-700 hover:bg-purple-100 transition-colors"
                     >
                       {skill}
                     </span>
@@ -90,11 +90,20 @@ export const Skills = () => {
         >
           <Card className="p-6 backdrop-blur-sm bg-white/50 border border-gray-200 hover:bg-purple-50 hover:border-purple-200 transform hover:-translate-y-1 transition-all duration-300">
             <h3 className="text-xl font-semibold mb-6 text-gray-900">Developer Tools & Technologies</h3>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div className="space-y-4">
               {Object.entries(devTools).map(([category, tools]) => (
                 <div key={category} className="space-y-2">
                   <p className="font-medium text-gray-900">{category}:</p>
-                  <p className="text-gray-700">{tools.join(", ")}</p>
+                  <div className="flex flex-wrap gap-2">
+                    {tools.map((tool) => (
+                      <span
+                        key={tool}
+                        className="px-3 py-1 bg-gray-100 rounded-full text-sm text-gray-700 hover:bg-purple-100 transition-colors"
+                      >
+                        {tool}
+                      </span>
+                    ))}
+                  </div>
                 </div>
               ))}
             </div>
