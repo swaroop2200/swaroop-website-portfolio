@@ -1,6 +1,22 @@
 import { motion } from "framer-motion";
 import { Card } from "./ui/card";
 
+const devTools = {
+  "OS": ["Windows", "Mac OS", "Linux"],
+  "VCS": ["Git", "GitHub", "BitBucket"],
+  "Cloud": ["AWS", "Azure"],
+  "Database": ["Azure SQL", "RDS", "S3", "CosmosDB", "DynamoDB"],
+  "Messaging": ["ActiveMQ", "Kafka", "Event Hub", "SQS"],
+  "Security": ["AD", "IAM", "Service Registry", "SSL"],
+  "Cache": ["Guava", "Redis", "MemCache"],
+  "Containerization": ["K8s", "Docker"],
+  "CI/CD": ["GitOps", "Jenkins"],
+  "Observability": ["Prometheus", "Grafana", "CloudWatch", "Splunk", "Open Observe"],
+  "Build Tools": ["Brazil", "Maven", "Ant", "Gradle"],
+  "Gen AI": ["Azure OpenAI"],
+  "IDE": ["VS Code", "IntelliJ"]
+};
+
 const skillCategories = [
   {
     title: "Languages",
@@ -22,22 +38,7 @@ const skillCategories = [
       "Langchain",
       "CDK",
     ],
-  },
-  {
-    title: "Developer Tools",
-    skills: [
-      "Git",
-      "GitHub",
-      "BitBucket",
-      "AWS",
-      "Azure",
-      "Docker",
-      "Kubernetes",
-      "Jenkins",
-      "Maven",
-      "Gradle",
-    ],
-  },
+  }
 ];
 
 export const Skills = () => {
@@ -51,11 +52,11 @@ export const Skills = () => {
           viewport={{ once: true }}
           className="text-center mb-12"
         >
-          <h2 className="text-3xl font-bold mb-4">Technical Skills</h2>
-          <div className="w-20 h-1 bg-gray-200 mx-auto"></div>
+          <h2 className="text-3xl font-bold mb-4 text-gray-900">Technical Skills</h2>
+          <div className="w-20 h-1 bg-gray-300 mx-auto"></div>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
           {skillCategories.map((category, index) => (
             <motion.div
               key={category.title}
@@ -64,8 +65,8 @@ export const Skills = () => {
               transition={{ delay: index * 0.1, duration: 0.5 }}
               viewport={{ once: true }}
             >
-              <Card className="p-6 h-full backdrop-blur-sm bg-white/50 border border-gray-200">
-                <h3 className="text-xl font-semibold mb-4">{category.title}</h3>
+              <Card className="p-6 h-full backdrop-blur-sm bg-white/50 border border-gray-200 hover:bg-purple-50 hover:border-purple-200 transform hover:-translate-y-1 transition-all duration-300">
+                <h3 className="text-xl font-semibold mb-4 text-gray-900">{category.title}</h3>
                 <div className="flex flex-wrap gap-2">
                   {category.skills.map((skill) => (
                     <span
@@ -80,6 +81,25 @@ export const Skills = () => {
             </motion.div>
           ))}
         </div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.2, duration: 0.5 }}
+          viewport={{ once: true }}
+        >
+          <Card className="p-6 backdrop-blur-sm bg-white/50 border border-gray-200 hover:bg-purple-50 hover:border-purple-200 transform hover:-translate-y-1 transition-all duration-300">
+            <h3 className="text-xl font-semibold mb-6 text-gray-900">Developer Tools & Technologies</h3>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {Object.entries(devTools).map(([category, tools]) => (
+                <div key={category} className="space-y-2">
+                  <p className="font-medium text-gray-900">{category}:</p>
+                  <p className="text-gray-700">{tools.join(", ")}</p>
+                </div>
+              ))}
+            </div>
+          </Card>
+        </motion.div>
       </div>
     </section>
   );

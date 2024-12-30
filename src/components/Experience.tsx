@@ -4,15 +4,15 @@ import { Card } from "./ui/card";
 const experiences = [
   {
     company: "Walmart",
-    logo: "/lovable-uploads/47be4933-fb28-4c3a-8190-e73f898578ec.png",
+    logo: "/lovable-uploads/eec3ebfb-8def-4a17-8401-eedb0d75986b.png",
     role: "Software Development Engineer 3",
     period: "Apr 2023 - Present",
     location: "Bangalore, India",
     highlights: [
-      "Working on Elvis, Sam's Club Omni Returns platform for both online and club returns",
-      "Processing online returns and tracking them back to return centre with Fedex Integration",
-      "Major contributor for developing flows to process online replacements",
-      "Development of critical asynchronous flows like Invoice, Receipt, Settlement, Shipment Tracking",
+      "Working on Elvis, Sam's Club Omni Returns platform for both online and club returns. Processing total 70k returns/day",
+      "Processing online returns and tracking them back to return centre with Fedex Integration. Processing 20k returns/day",
+      "Major contributor for developing flows to process online replacements. Processing 5k replacements/day",
+      "Development of critical asynchronous flows like Invoice, Refund, Settlement, Shipment Tracking which are event driven",
       "Platform Improvements like graceful shutdown of pods, concurrent processing of orders",
       "Tech Stack: Azure, Java, Python, Kubernetes, Spring, Kafka, ActiveMQ, AzureSQL, ApacheCamel, MemCache",
     ],
@@ -33,7 +33,7 @@ const experiences = [
   },
   {
     company: "Wissen Technology",
-    logo: "/lovable-uploads/wissen-logo.png",
+    logo: "/lovable-uploads/7c35d476-8fed-4acd-bda8-af4f3bcd64db.png",
     role: "Associate Software Engineer",
     period: "Jun 2020 - Feb 2022",
     location: "Bangalore, India",
@@ -45,7 +45,7 @@ const experiences = [
   },
   {
     company: "Perpule",
-    logo: "/lovable-uploads/perpule-logo.png",
+    logo: "/lovable-uploads/6ac15b45-45d1-4d2b-acf0-642b0bb1f883.png",
     role: "Software Engineering Intern",
     period: "Jan 2020 - May 2020",
     location: "Bangalore, India",
@@ -69,8 +69,8 @@ export const Experience = () => {
           viewport={{ once: true }}
           className="text-center mb-12"
         >
-          <h2 className="text-3xl font-bold mb-4">Experience</h2>
-          <div className="w-20 h-1 bg-gray-200 mx-auto"></div>
+          <h2 className="text-3xl font-bold mb-4 text-gray-900">Experience</h2>
+          <div className="w-20 h-1 bg-gray-300 mx-auto"></div>
         </motion.div>
 
         <div className="space-y-6">
@@ -83,7 +83,7 @@ export const Experience = () => {
               viewport={{ once: true }}
             >
               <Card className="p-6 backdrop-blur-sm bg-white/50 border border-gray-200 hover:bg-purple-50 hover:border-purple-200 transform hover:-translate-y-1 transition-all duration-300">
-                <div className="flex flex-wrap justify-between items-start mb-4">
+                <div className="flex flex-col md:flex-row justify-between items-start mb-4 space-y-4 md:space-y-0">
                   <div className="flex items-center gap-4">
                     <img 
                       src={exp.logo} 
@@ -91,18 +91,18 @@ export const Experience = () => {
                       className="w-12 h-12 object-contain"
                     />
                     <div>
-                      <h3 className="text-xl font-semibold">{exp.company}</h3>
-                      <p className="text-gray-600">{exp.role}</p>
+                      <h3 className="text-xl font-semibold text-gray-900">{exp.company}</h3>
+                      <p className="text-gray-700">{exp.role}</p>
                     </div>
                   </div>
-                  <div className="text-right">
-                    <p className="text-gray-600">{exp.period}</p>
-                    <p className="text-gray-500">{exp.location}</p>
+                  <div className="text-right md:ml-4">
+                    <p className="text-gray-700">{exp.period}</p>
+                    <p className="text-gray-600">{exp.location}</p>
                   </div>
                 </div>
-                <ul className="list-disc list-inside space-y-2 text-gray-600">
+                <ul className="list-disc list-inside space-y-2 text-gray-700 ml-4">
                   {exp.highlights.map((highlight, i) => (
-                    <li key={i}>{highlight}</li>
+                    <li key={i} className="text-left">{highlight}</li>
                   ))}
                 </ul>
               </Card>
