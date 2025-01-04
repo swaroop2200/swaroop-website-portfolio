@@ -17,13 +17,8 @@ const experiences = [
     role: "Software Development Engineer 1",
     period: "Apr 2022 - Apr 2023",
     location: "Bangalore, India",
-    highlights: [
-      "Working on Amazon Local Shop, enabling customers to buy from local shops",
-      "Refactored team's core repository using appropriate design patterns",
-      "Developed a unified UI for category-based widgets",
-      "Developed features to tag Local Shop products in Amazon Search Page results",
-      "Tech Stack: AWS, Java, CDK, JUnit, Gradle, Maven, Coral, Datapath, iGraph, Pipelines, Apollo",
-    ],
+    description: "At Amazon, I worked on the Local Shop program, empowering customers to purchase products from nearby local stores. One of my major contributions was refactoring the team's core repository by applying scalable design patterns and reusable components, accelerating widget development from a projected 6 months to just 2 months for over 10 widgets. I spearheaded the creation of a unified UI framework for category-based widgets, driving adoption across multiple teams. I also developed features that tagged Local Shop products in Amazon's search results, enhancing visibility by 17%. Additionally, I automated the code review process by developing a Slack bot, improving closure efficiency by 40%. This solution was widely adopted by other teams, further amplifying its impact.",
+    techStack: "Tech Stack: AWS, Java, CDK, JUnit, Gradle, Maven, Coral, Datapath, iGraph, Pipelines, Apollo"
   },
   {
     company: "Wissen Technology",
@@ -31,11 +26,8 @@ const experiences = [
     role: "Associate Software Engineer",
     period: "Jun 2020 - Feb 2022",
     location: "Bangalore, India",
-    highlights: [
-      "Worked in Morgan Stanley - Private Wealth Management division",
-      "Developed customizable workflows to automate the order lifecycle",
-      "Tech Stack: Java, SpringBoot and Batch, Python, Sybase, Db2, IBM mqs, Mockito",
-    ],
+    description: "At Wissen Technology, I worked within Morgan Stanley's Private Wealth Management division, where I integrated a new Australian Mutual Fund Custodian into the firm's portfolio management system, contributing to a 35% expansion in the Australian customer base. I developed customizable automated workflows to manage the entire order lifecycle, reducing the operations team's workload by approximately 4 hours daily. I also implemented batch jobs that generated daily reports, monitoring over 45 breach rules to ensure compliance and risk mitigation for high-net-worth clients. This work helped streamline operations and improved the accuracy and efficiency of financial reporting.",
+    techStack: "Tech Stack: Java, Spring Boot, Spring Batch, Python, Sybase, Db2, IBM MQ, Mockito"
   },
   {
     company: "Perpule",
@@ -43,12 +35,8 @@ const experiences = [
     role: "Software Engineering Intern",
     period: "Jan 2020 - May 2020",
     location: "Bangalore, India",
-    highlights: [
-      "Worked on UltraPos, a cloud-based point of sale system",
-      "Developed features for inventory management and order processing",
-      "Implemented real-time order tracking and notification system",
-      "Tech Stack: Node.js, React, MongoDB, Redis, AWS",
-    ],
+    description: "During my internship at Perpule (later acquired by Amazon), I contributed to the development of self-checkout and self-ordering solutions for offline stores, malls, and cafeterias. I played a hands-on role in integrating Amplitude analytics to track user behavior and optimize product offerings. Additionally, I automated mobile app testing workflows using Appium and Cucumber, enhancing the speed and reliability of testing processes. This experience allowed me to thrive in a fast-paced startup environment, wearing multiple hats and contributing directly to Perpule's growth and success.",
+    techStack: "Tech Stack: Java, Android, React Native, Spring Boot, GCP, AWS, MySQL"
   },
 ];
 
