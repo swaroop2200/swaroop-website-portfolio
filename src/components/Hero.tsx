@@ -13,11 +13,13 @@ export const Hero = () => {
           className="text-center mb-8"
         >
           <div className="mb-8 flex justify-center">
-            <img
-              src="/lovable-uploads/bb1ef300-bbcb-4264-87ea-39c004a056ed.png"
-              alt="Swaroop Astakar Shekar"
-              className="w-56 h-56 rounded-full object-cover border-4 border-white shadow-lg"
-            />
+            <div className="w-56 h-56 rounded-full p-1 bg-gradient-to-r from-blue-200 to-gray-200 shadow-xl">
+              <img
+                src="/lovable-uploads/bb1ef300-bbcb-4264-87ea-39c004a056ed.png"
+                alt="Swaroop Astakar Shekar"
+                className="w-full h-full rounded-full object-cover border-4 border-white"
+              />
+            </div>
           </div>
           <h1 className="text-4xl md:text-6xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-gray-900 to-gray-600">
             Swaroop Astakar Shekar
