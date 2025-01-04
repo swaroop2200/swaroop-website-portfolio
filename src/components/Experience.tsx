@@ -8,14 +8,8 @@ const experiences = [
     role: "Software Development Engineer 3",
     period: "Apr 2023 - Present",
     location: "Bangalore, India",
-    highlights: [
-      "Working on Elvis, Sam's Club Omni Returns platform for both online and club returns. Processing total 70k returns/day",
-      "Processing online returns and tracking them back to return centre with Fedex Integration. Processing 20k returns/day",
-      "Major contributor for developing flows to process online replacements. Processing 5k replacements/day",
-      "Development of critical asynchronous flows like Invoice, Refund, Settlement, Shipment Tracking which are event driven",
-      "Platform Improvements like graceful shutdown of pods, concurrent processing of orders",
-      "Tech Stack: Azure, Java, Python, Kubernetes, Spring, Kafka, ActiveMQ, AzureSQL, ApacheCamel, MemCache",
-    ],
+    description: "At Walmart, I am a key contributor to the development of Elvis, Sam's Club's Omni Returns platform, which handles both online and in-club returns, processing over 70k returns daily. I've led efforts to integrate FedEx for online returns, enabling seamless return tracking to distribution centers and managing 20k online returns per day. I also developed critical workflows for online replacements, processing 5k replacements daily. My focus has been on building asynchronous event-driven flows for invoices, receipts, settlements, and shipment tracking. Additionally, I contributed to platform improvements like graceful pod shutdowns, distributed order locking, and concurrent order processing to enhance performance and resilience. For my contributions, I received the Bravo Award for driving significant impact and innovation.",
+    techStack: "Tech Stack: Azure, Java, Python, Kubernetes, Spring, Kafka, ActiveMQ, Azure SQL, Apache Camel, MemCache"
   },
   {
     company: "Amazon",
@@ -100,13 +94,10 @@ export const Experience = () => {
                     <p className="text-gray-600">{exp.location}</p>
                   </div>
                 </div>
-                <ul className="list-disc pl-6 space-y-2">
-                  {exp.highlights.map((highlight, i) => (
-                    <li key={i} className="text-gray-700">
-                      <span className="block pl-2">{highlight}</span>
-                    </li>
-                  ))}
-                </ul>
+                <div className="space-y-4">
+                  <p className="text-gray-700 leading-relaxed">{exp.description}</p>
+                  <p className="text-gray-700 font-medium">{exp.techStack}</p>
+                </div>
               </Card>
             </motion.div>
           ))}
