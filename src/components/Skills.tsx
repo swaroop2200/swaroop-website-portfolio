@@ -93,7 +93,7 @@ export const Skills = () => {
             <div className="space-y-4">
               {Object.entries(devTools).map(([category, tools]) => (
                 <div key={category} className="space-y-2">
-                  <p className="font-medium text-gray-900">{category}:</p>
+                  <p className="font-medium text-gray-900">{category} </p>
                   <div className="flex flex-wrap gap-2">
                     {tools.map((tool) => (
                       <span
