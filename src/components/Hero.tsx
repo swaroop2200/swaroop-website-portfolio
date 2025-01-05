@@ -33,11 +33,11 @@ export const Hero = () => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.2, duration: 0.5 }}
-          className="flex flex-wrap justify-center gap-4 mt-8"
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mt-8"
         >
           <Card className="p-4 backdrop-blur-sm bg-white/50 border border-gray-200">
-            <div className="flex items-center gap-2">
-              <MapPin className="w-5 h-5 text-gray-600" />
+            <div className="flex items-center gap-3">
+              <MapPin className="w-5 h-5 text-gray-600 flex-shrink-0" />
               <div>
                 <p className="text-sm text-gray-600">Location</p>
                 <p className="font-medium text-gray-800">Bangalore, India</p>
@@ -45,17 +45,17 @@ export const Hero = () => {
             </div>
           </Card>
           <Card className="p-4 backdrop-blur-sm bg-white/50 border border-gray-200">
-            <div className="flex items-center gap-2">
-              <Mail className="w-5 h-5 text-gray-600" />
-              <div>
+            <div className="flex items-center gap-3">
+              <Mail className="w-5 h-5 text-gray-600 flex-shrink-0" />
+              <div className="min-w-0">
                 <p className="text-sm text-gray-600">Email</p>
-                <p className="font-medium text-gray-800">swaroop.as97@gmail.com</p>
+                <p className="font-medium text-gray-800 truncate">swaroop.as97@gmail.com</p>
               </div>
             </div>
           </Card>
           <Card className="p-4 backdrop-blur-sm bg-white/50 border border-gray-200">
-            <div className="flex items-center gap-2">
-              <Phone className="w-5 h-5 text-gray-600" />
+            <div className="flex items-center gap-3">
+              <Phone className="w-5 h-5 text-gray-600 flex-shrink-0" />
               <div>
                 <p className="text-sm text-gray-600">Phone</p>
                 <p className="font-medium text-gray-800">+91-8546989486</p>
@@ -66,12 +66,15 @@ export const Hero = () => {
             href="https://www.linkedin.com/in/swaroop-as-836484169/"
             target="_blank"
             rel="noopener noreferrer"
+            className="sm:col-span-1"
           >
-            <Card className="p-4 backdrop-blur-sm bg-white/50 border border-gray-200 hover:bg-blue-50 hover:border-blue-200 transform hover:-translate-y-1 transition-all duration-300 cursor-pointer flex items-center gap-2">
-              <Linkedin className="w-5 h-5 text-blue-600" />
-              <div>
-                <p className="text-sm text-gray-600">LinkedIn</p>
-                <p className="font-medium text-gray-800">Connect with me</p>
+            <Card className="p-4 backdrop-blur-sm bg-white/50 border border-gray-200 hover:bg-blue-50 hover:border-blue-200 transform hover:-translate-y-1 transition-all duration-300 cursor-pointer h-full">
+              <div className="flex items-center gap-3">
+                <Linkedin className="w-5 h-5 text-blue-600 flex-shrink-0" />
+                <div>
+                  <p className="text-sm text-gray-600">LinkedIn</p>
+                  <p className="font-medium text-gray-800">Connect with me</p>
+                </div>
               </div>
             </Card>
           </a>
@@ -79,12 +82,15 @@ export const Hero = () => {
             href="https://github.com/swaroop2200"
             target="_blank"
             rel="noopener noreferrer"
+            className="sm:col-span-1"
           >
-            <Card className="p-4 backdrop-blur-sm bg-white/50 border border-gray-200 hover:bg-gray-50 hover:border-gray-200 transform hover:-translate-y-1 transition-all duration-300 cursor-pointer flex items-center gap-2">
-              <Github className="w-5 h-5 text-gray-800" />
-              <div>
-                <p className="text-sm text-gray-600">GitHub</p>
-                <p className="font-medium text-gray-800">View my projects</p>
+            <Card className="p-4 backdrop-blur-sm bg-white/50 border border-gray-200 hover:bg-gray-50 hover:border-gray-200 transform hover:-translate-y-1 transition-all duration-300 cursor-pointer h-full">
+              <div className="flex items-center gap-3">
+                <Github className="w-5 h-5 text-gray-800 flex-shrink-0" />
+                <div>
+                  <p className="text-sm text-gray-600">GitHub</p>
+                  <p className="font-medium text-gray-800">View my projects</p>
+                </div>
               </div>
             </Card>
           </a>

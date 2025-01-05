@@ -23,13 +23,13 @@ export const Education = () => {
           viewport={{ once: true }}
         >
           <Card className="p-6 backdrop-blur-sm bg-white/50 border border-gray-200 hover:bg-purple-50 hover:border-purple-200 transform hover:-translate-y-1 transition-all duration-300">
-            <div className="flex flex-wrap justify-between items-start">
+            <div className="flex flex-col sm:flex-row sm:justify-between sm:items-start gap-4">
               <div>
                 <h3 className="text-xl font-semibold text-gray-900">PES University</h3>
                 <p className="text-gray-700">B.Tech Computer Science Engineering</p>
                 <p className="text-gray-700">GPA: 9.0, Majors in Algorithms and Computing</p>
               </div>
-              <div className="text-right mt-2 md:mt-0">
+              <div className="text-left sm:text-right">
                 <p className="text-gray-700">2016 - 2020</p>
                 <p className="text-gray-600">Bangalore, India</p>
               </div>
