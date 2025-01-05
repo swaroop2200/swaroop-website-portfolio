@@ -1,5 +1,12 @@
 import { motion } from "framer-motion";
 import { Card } from "./ui/card";
+import {
+  Collapsible,
+  CollapsibleContent,
+  CollapsibleTrigger,
+} from "./ui/collapsible";
+import { ChevronDown, ChevronUp } from "lucide-react";
+import { useState } from "react";
 
 const experiences = [
   {
@@ -41,6 +48,16 @@ const experiences = [
 ];
 
 export const Experience = () => {
+  const [openItems, setOpenItems] = useState<string[]>([]);
+
+  const toggleItem = (company: string) => {
+    setOpenItems(prev => 
+      prev.includes(company) 
+        ? prev.filter(item => item !== company)
+        : [...prev, company]
+    );
+  };
+
   return (
     <section className="py-20 px-4 bg-gray-50">
       <div className="max-w-6xl mx-auto">
@@ -64,31 +81,43 @@ export const Experience = () => {
               transition={{ delay: index * 0.1, duration: 0.5 }}
               viewport={{ once: true }}
             >
-              <Card className="p-6 backdrop-blur-sm bg-white/50 border border-gray-200 hover:bg-purple-50 hover:border-purple-200 transform hover:-translate-y-1 transition-all duration-300">
-                <div className="flex flex-col space-y-4">
-                  <div className="flex flex-col sm:flex-row sm:justify-between sm:items-start gap-4">
-                    <div className="flex items-center gap-4">
-                      <img 
-                        src={exp.logo} 
-                        alt={`${exp.company} logo`} 
-                        className="w-12 h-12 object-contain"
-                      />
-                      <div>
-                        <h3 className="text-xl font-semibold text-gray-900">{exp.company}</h3>
-                        <p className="text-gray-700">{exp.role}</p>
+              <Collapsible
+                open={openItems.includes(exp.company)}
+                onOpenChange={() => toggleItem(exp.company)}
+              >
+                <Card className="overflow-hidden">
+                  <CollapsibleTrigger className="w-full">
+                    <div className="p-6 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 hover:bg-purple-50 transition-colors duration-300">
+                      <div className="flex items-center gap-4">
+                        <img 
+                          src={exp.logo} 
+                          alt={`${exp.company} logo`} 
+                          className="w-12 h-12 object-contain"
+                        />
+                        <div className="text-left">
+                          <h3 className="text-xl font-semibold text-gray-900">{exp.company}</h3>
+                          <p className="text-gray-700">{exp.role}</p>
+                        </div>
                       </div>
+                      <div className="flex flex-col sm:text-right">
+                        <p className="text-gray-700">{exp.period}</p>
+                        <p className="text-gray-600">{exp.location}</p>
+                      </div>
+                      {openItems.includes(exp.company) ? (
+                        <ChevronUp className="w-6 h-6 text-gray-500 ml-2" />
+                      ) : (
+                        <ChevronDown className="w-6 h-6 text-gray-500 ml-2" />
+                      )}
                     </div>
-                    <div className="text-left sm:text-right">
-                      <p className="text-gray-700">{exp.period}</p>
-                      <p className="text-gray-600">{exp.location}</p>
+                  </CollapsibleTrigger>
+                  <CollapsibleContent>
+                    <div className="px-6 pb-6 space-y-4 border-t border-gray-100">
+                      <p className="text-gray-700 leading-relaxed mt-4">{exp.description}</p>
+                      <p className="text-gray-700 font-medium">{exp.techStack}</p>
                     </div>
-                  </div>
-                  <div className="space-y-4">
-                    <p className="text-gray-700 leading-relaxed">{exp.description}</p>
-                    <p className="text-gray-700 font-medium">{exp.techStack}</p>
-                  </div>
-                </div>
-              </Card>
+                  </CollapsibleContent>
+                </Card>
+              </Collapsible>
             </motion.div>
           ))}
         </div>

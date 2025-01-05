@@ -15,7 +15,7 @@ export const Hero = () => {
           <div className="mb-8 flex justify-center">
             <div className="w-56 h-56 rounded-full p-1 bg-blue-100 shadow-xl">
               <img
-                src="/lovable-uploads/bb1ef300-bbcb-4264-87ea-39c004a056ed.png"
+                src="/lovable-uploads/364f415c-0044-484d-be9b-78bc889987b3.png"
                 alt="Swaroop Astakar Shekar"
                 className="w-full h-full rounded-full object-cover border-4 border-white"
               />
