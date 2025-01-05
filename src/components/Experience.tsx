@@ -99,15 +99,20 @@ export const Experience = () => {
                           <p className="text-gray-700">{exp.role}</p>
                         </div>
                       </div>
-                      <div className="flex flex-col sm:text-right">
-                        <p className="text-gray-700">{exp.period}</p>
-                        <p className="text-gray-600">{exp.location}</p>
+                      <div className="flex flex-col items-start sm:items-end text-left sm:text-right">
+                        <p className="text-sm font-medium text-gray-700">{exp.period}</p>
+                        <div className="flex items-center gap-1 text-gray-600 text-sm">
+                          <MapPin className="w-4 h-4" />
+                          <span>{exp.location}</span>
+                        </div>
                       </div>
-                      {openItems.includes(exp.company) ? (
-                        <ChevronUp className="w-6 h-6 text-gray-500 ml-2" />
-                      ) : (
-                        <ChevronDown className="w-6 h-6 text-gray-500 ml-2" />
-                      )}
+                      <div className="absolute right-4 top-1/2 transform -translate-y-1/2 hidden sm:block">
+                        {openItems.includes(exp.company) ? (
+                          <ChevronUp className="w-6 h-6 text-gray-500" />
+                        ) : (
+                          <ChevronDown className="w-6 h-6 text-gray-500" />
+                        )}
+                      </div>
                     </div>
                   </CollapsibleTrigger>
                   <CollapsibleContent>

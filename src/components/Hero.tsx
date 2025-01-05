@@ -18,6 +18,7 @@ export const Hero = () => {
                 src="/lovable-uploads/364f415c-0044-484d-be9b-78bc889987b3.png"
                 alt="Swaroop Astakar Shekar"
                 className="w-full h-full rounded-full object-cover border-4 border-white"
+                style={{ objectPosition: "center top" }}
               />
             </div>
           </div>
