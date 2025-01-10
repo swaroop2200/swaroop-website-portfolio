@@ -48,18 +48,26 @@ const experiences = [
 ];
 
 export const Experience = () => {
-  const [hoveredItem, setHoveredItem] = useState<string | null>(null);
+  const [openItems, setOpenItems] = useState<string[]>([]);
+
+  const toggleItem = (company: string) => {
+    setOpenItems(prev => 
+      prev.includes(company) 
+        ? prev.filter(item => item !== company)
+        : [...prev, company]
+    );
+  };
 
   return (
     <section className="relative py-20 px-4 overflow-hidden">
       {/* Dynamic Background */}
       <div className="absolute inset-0 -z-10">
         <div className="absolute inset-0 bg-gradient-to-br from-purple-50 to-blue-50">
-          <div className="absolute inset-0 opacity-30">
+          <div className="absolute inset-0">
             {[...Array(20)].map((_, i) => (
               <motion.div
                 key={i}
-                className="absolute rounded-full bg-gradient-to-br from-purple-300 to-blue-300"
+                className="absolute rounded-full bg-gradient-to-br from-purple-300/30 to-blue-300/30"
                 style={{
                   width: Math.random() * 200 + 50,
                   height: Math.random() * 200 + 50,
@@ -103,10 +111,11 @@ export const Experience = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ delay: index * 0.1, duration: 0.5 }}
               viewport={{ once: true }}
-              onMouseEnter={() => setHoveredItem(exp.company)}
-              onMouseLeave={() => setHoveredItem(null)}
             >
-              <Collapsible open={hoveredItem === exp.company}>
+              <Collapsible
+                open={openItems.includes(exp.company)}
+                onOpenChange={() => toggleItem(exp.company)}
+              >
                 <Card className="overflow-hidden transition-all duration-300 hover:shadow-lg">
                   <CollapsibleTrigger className="w-full">
                     <div className="p-6 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 hover:bg-white/80 transition-colors duration-300">
@@ -128,13 +137,13 @@ export const Experience = () => {
                           <span>{exp.location}</span>
                         </div>
                       </div>
-                      <div className="absolute right-4 top-1/2 transform -translate-y-1/2 hidden sm:block">
-                        {hoveredItem === exp.company ? (
-                          <ChevronUp className="w-6 h-6 text-gray-500" />
-                        ) : (
-                          <ChevronDown className="w-6 h-6 text-gray-500" />
-                        )}
-                      </div>
+                    </div>
+                    <div className="flex justify-center pb-2">
+                      {openItems.includes(exp.company) ? (
+                        <ChevronUp className="w-5 h-5 text-gray-400" />
+                      ) : (
+                        <ChevronDown className="w-5 h-5 text-gray-400" />
+                      )}
                     </div>
                   </CollapsibleTrigger>
                   <CollapsibleContent>
