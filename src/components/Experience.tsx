@@ -5,7 +5,7 @@ import {
   CollapsibleContent,
   CollapsibleTrigger,
 } from "./ui/collapsible";
-import { ChevronDown, ChevronUp, MapPin } from "lucide-react";
+import { ChevronDown, ChevronUp, MapPin, Code } from "lucide-react";
 import { useState } from "react";
 
 const experiences = [
@@ -60,14 +60,40 @@ export const Experience = () => {
 
   return (
     <section className="relative py-20 px-4 overflow-hidden">
-      {/* Dynamic Background */}
+      {/* Dynamic Tech Background */}
       <div className="absolute inset-0 -z-10">
-        <div className="absolute inset-0 bg-gradient-to-br from-purple-50 to-blue-50">
+        <div className="absolute inset-0 bg-gradient-to-br from-gray-900 via-purple-900 to-violet-800">
+          {/* Code Matrix Effect */}
+          <div className="absolute inset-0 opacity-10">
+            {[...Array(50)].map((_, i) => (
+              <motion.div
+                key={i}
+                className="absolute text-green-500 text-opacity-50 font-mono text-sm"
+                style={{
+                  left: `${Math.random() * 100}%`,
+                  top: `${Math.random() * 100}%`,
+                }}
+                animate={{
+                  y: [0, 1000],
+                  opacity: [0, 1, 0],
+                }}
+                transition={{
+                  duration: Math.random() * 10 + 5,
+                  repeat: Infinity,
+                  ease: "linear",
+                }}
+              >
+                {String.fromCharCode(33 + Math.floor(Math.random() * 94))}
+              </motion.div>
+            ))}
+          </div>
+          
+          {/* Floating Tech Circles */}
           <div className="absolute inset-0">
             {[...Array(20)].map((_, i) => (
               <motion.div
-                key={i}
-                className="absolute rounded-full bg-gradient-to-br from-purple-300/30 to-blue-300/30"
+                key={`circle-${i}`}
+                className="absolute rounded-full bg-gradient-to-br from-blue-400/20 to-purple-400/20"
                 style={{
                   width: Math.random() * 200 + 50,
                   height: Math.random() * 200 + 50,
@@ -78,9 +104,10 @@ export const Experience = () => {
                   x: [0, Math.random() * 100 - 50],
                   y: [0, Math.random() * 100 - 50],
                   scale: [1, Math.random() + 0.5],
+                  rotate: [0, 360],
                 }}
                 transition={{
-                  duration: Math.random() * 10 + 10,
+                  duration: Math.random() * 20 + 10,
                   repeat: Infinity,
                   repeatType: "reverse",
                   ease: "easeInOut",
@@ -99,8 +126,21 @@ export const Experience = () => {
           viewport={{ once: true }}
           className="text-center mb-12"
         >
-          <h2 className="text-3xl font-bold mb-4 text-gray-900">Experience</h2>
-          <div className="w-20 h-1 bg-gray-300 mx-auto"></div>
+          <h2 className="text-3xl font-bold mb-4 text-white">Experience</h2>
+          <div className="w-20 h-1 bg-purple-400 mx-auto"></div>
+          
+          {/* LeetCode Profile Link */}
+          <motion.a
+            href="https://leetcode.com/u/user9531W/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 mt-4 px-4 py-2 bg-gradient-to-r from-gray-800 to-gray-700 rounded-full text-white hover:from-gray-700 hover:to-gray-600 transition-all duration-300"
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+          >
+            <Code className="w-4 h-4" />
+            <span>View My LeetCode Profile</span>
+          </motion.a>
         </motion.div>
 
         <div className="space-y-6">
@@ -116,7 +156,7 @@ export const Experience = () => {
                 open={openItems.includes(exp.company)}
                 onOpenChange={() => toggleItem(exp.company)}
               >
-                <Card className="overflow-hidden transition-all duration-300 hover:shadow-lg">
+                <Card className="overflow-hidden transition-all duration-300 hover:shadow-lg backdrop-blur-sm bg-white/90">
                   <CollapsibleTrigger className="w-full">
                     <div className="p-6 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 hover:bg-white/80 transition-colors duration-300">
                       <div className="flex items-center gap-4">
