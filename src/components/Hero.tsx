@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { Card } from "./ui/card";
-import { Linkedin, Github, MapPin, Mail, Phone } from "lucide-react";
+import { Linkedin, Github, MapPin, Mail, Phone, Code } from "lucide-react";
 
 export const Hero = () => {
   return (
@@ -91,6 +91,22 @@ export const Hero = () => {
                 <div>
                   <p className="text-sm text-gray-600">GitHub</p>
                   <p className="font-medium text-gray-800">View my projects</p>
+                </div>
+              </div>
+            </Card>
+          </a>
+          <a 
+            href="https://leetcode.com/u/user9531W/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="sm:col-span-1"
+          >
+            <Card className="p-4 backdrop-blur-sm bg-white/50 border border-gray-200 hover:bg-gray-50 hover:border-gray-200 transform hover:-translate-y-1 transition-all duration-300 cursor-pointer h-full">
+              <div className="flex items-center gap-3">
+                <Code className="w-5 h-5 text-gray-800 flex-shrink-0" />
+                <div>
+                  <p className="text-sm text-gray-600">LeetCode</p>
+                  <p className="font-medium text-gray-800">View my profile</p>
                 </div>
               </div>
             </Card>
