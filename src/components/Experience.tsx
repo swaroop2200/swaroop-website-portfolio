@@ -48,19 +48,42 @@ const experiences = [
 ];
 
 export const Experience = () => {
-  const [openItems, setOpenItems] = useState<string[]>([]);
-
-  const toggleItem = (company: string) => {
-    setOpenItems(prev => 
-      prev.includes(company) 
-        ? prev.filter(item => item !== company)
-        : [...prev, company]
-    );
-  };
+  const [hoveredItem, setHoveredItem] = useState<string | null>(null);
 
   return (
-    <section className="py-20 px-4 bg-gray-50">
-      <div className="max-w-6xl mx-auto">
+    <section className="relative py-20 px-4 overflow-hidden">
+      {/* Dynamic Background */}
+      <div className="absolute inset-0 -z-10">
+        <div className="absolute inset-0 bg-gradient-to-br from-purple-50 to-blue-50">
+          <div className="absolute inset-0 opacity-30">
+            {[...Array(20)].map((_, i) => (
+              <motion.div
+                key={i}
+                className="absolute rounded-full bg-gradient-to-br from-purple-300 to-blue-300"
+                style={{
+                  width: Math.random() * 200 + 50,
+                  height: Math.random() * 200 + 50,
+                  left: `${Math.random() * 100}%`,
+                  top: `${Math.random() * 100}%`,
+                }}
+                animate={{
+                  x: [0, Math.random() * 100 - 50],
+                  y: [0, Math.random() * 100 - 50],
+                  scale: [1, Math.random() + 0.5],
+                }}
+                transition={{
+                  duration: Math.random() * 10 + 10,
+                  repeat: Infinity,
+                  repeatType: "reverse",
+                  ease: "easeInOut",
+                }}
+              />
+            ))}
+          </div>
+        </div>
+      </div>
+
+      <div className="max-w-6xl mx-auto relative">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -80,14 +103,13 @@ export const Experience = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ delay: index * 0.1, duration: 0.5 }}
               viewport={{ once: true }}
+              onMouseEnter={() => setHoveredItem(exp.company)}
+              onMouseLeave={() => setHoveredItem(null)}
             >
-              <Collapsible
-                open={openItems.includes(exp.company)}
-                onOpenChange={() => toggleItem(exp.company)}
-              >
-                <Card className="overflow-hidden">
+              <Collapsible open={hoveredItem === exp.company}>
+                <Card className="overflow-hidden transition-all duration-300 hover:shadow-lg">
                   <CollapsibleTrigger className="w-full">
-                    <div className="p-6 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 hover:bg-purple-50 transition-colors duration-300">
+                    <div className="p-6 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 hover:bg-white/80 transition-colors duration-300">
                       <div className="flex items-center gap-4">
                         <img 
                           src={exp.logo} 
@@ -107,7 +129,7 @@ export const Experience = () => {
                         </div>
                       </div>
                       <div className="absolute right-4 top-1/2 transform -translate-y-1/2 hidden sm:block">
-                        {openItems.includes(exp.company) ? (
+                        {hoveredItem === exp.company ? (
                           <ChevronUp className="w-6 h-6 text-gray-500" />
                         ) : (
                           <ChevronDown className="w-6 h-6 text-gray-500" />
@@ -116,7 +138,7 @@ export const Experience = () => {
                     </div>
                   </CollapsibleTrigger>
                   <CollapsibleContent>
-                    <div className="px-6 pb-6 space-y-4 border-t border-gray-100">
+                    <div className="px-6 pb-6 space-y-4 border-t border-gray-100 bg-white/80">
                       <p className="text-gray-700 leading-relaxed mt-4">{exp.description}</p>
                       <p className="text-gray-700 font-medium">{exp.techStack}</p>
                     </div>
