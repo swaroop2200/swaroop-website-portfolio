@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { Card } from "./ui/card";
-import { Linkedin, Github, MapPin, Mail, Phone, Code2 } from "lucide-react";
+import { Linkedin, Github, MapPin, Mail, Phone, Code2, Link } from "lucide-react";
 
 export const Hero = () => {
   return (
@@ -72,10 +72,11 @@ export const Hero = () => {
             <Card className="p-4 backdrop-blur-sm bg-white/50 border border-gray-200 hover:bg-blue-50 hover:border-blue-200 transform hover:-translate-y-1 transition-all duration-300 cursor-pointer h-full">
               <div className="flex items-center gap-3">
                 <Linkedin className="w-5 h-5 text-blue-600 flex-shrink-0" />
-                <div>
+                <div className="flex-grow">
                   <p className="text-sm text-gray-600">LinkedIn</p>
                   <p className="font-medium text-gray-800">Connect with me</p>
                 </div>
+                <Link className="w-4 h-4 text-gray-400" />
               </div>
             </Card>
           </a>
@@ -88,10 +89,11 @@ export const Hero = () => {
             <Card className="p-4 backdrop-blur-sm bg-white/50 border border-gray-200 hover:bg-gray-50 hover:border-gray-200 transform hover:-translate-y-1 transition-all duration-300 cursor-pointer h-full">
               <div className="flex items-center gap-3">
                 <Github className="w-5 h-5 text-gray-800 flex-shrink-0" />
-                <div>
+                <div className="flex-grow">
                   <p className="text-sm text-gray-600">GitHub</p>
                   <p className="font-medium text-gray-800">View my projects</p>
                 </div>
+                <Link className="w-4 h-4 text-gray-400" />
               </div>
             </Card>
           </a>
@@ -101,13 +103,14 @@ export const Hero = () => {
             rel="noopener noreferrer"
             className="sm:col-span-1"
           >
-            <Card className="p-4 backdrop-blur-sm bg-white/50 border border-gray-200 hover:bg-gray-50 hover:border-gray-200 transform hover:-translate-y-1 transition-all duration-300 cursor-pointer h-full dark:bg-gray-800/50 dark:border-gray-700 dark:hover:bg-gray-700/50">
+            <Card className="p-4 backdrop-blur-sm bg-white/50 border border-gray-200 hover:bg-gray-50 hover:border-gray-200 transform hover:-translate-y-1 transition-all duration-300 cursor-pointer h-full">
               <div className="flex items-center gap-3">
                 <Code2 className="w-5 h-5 text-orange-500 flex-shrink-0" />
-                <div>
-                  <p className="text-sm text-gray-600 dark:text-gray-400">LeetCode</p>
-                  <p className="font-medium text-gray-800 dark:text-gray-200">View my profile</p>
+                <div className="flex-grow">
+                  <p className="text-sm text-gray-600">LeetCode</p>
+                  <p className="font-medium text-gray-800">View my profile</p>
                 </div>
+                <Link className="w-4 h-4 text-gray-400" />
               </div>
             </Card>
           </a>

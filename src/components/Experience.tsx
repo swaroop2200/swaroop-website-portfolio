@@ -116,7 +116,7 @@ export const Experience = () => {
                 open={openItems.includes(exp.company)}
                 onOpenChange={() => toggleItem(exp.company)}
               >
-                <Card className="overflow-hidden transition-all duration-300 hover:shadow-lg hover:bg-pink-50/50">
+                <Card className="overflow-hidden transition-all duration-300 hover:bg-pink-100/80 hover:border-pink-200 transform hover:-translate-y-1">
                   <CollapsibleTrigger className="w-full">
                     <div className="p-6 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 hover:bg-white/80 transition-colors duration-300">
                       <div className="flex items-center gap-4">
