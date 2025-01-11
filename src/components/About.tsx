@@ -22,7 +22,7 @@ export const About = () => {
           transition={{ delay: 0.2, duration: 0.5 }}
           viewport={{ once: true }}
         >
-          <Card className="p-8 backdrop-blur-sm bg-white/50 border border-gray-200">
+          <Card className="p-8 backdrop-blur-sm bg-white/50 border border-gray-200 transition-all duration-300 hover:bg-pink-50/50 hover:shadow-lg">
             <p className="text-gray-600 leading-relaxed">
               Pragmatic, customer-centric Software Engineer with 4 years of experience in designing and developing scalable back-end systems on AWS, Azure, and Kubernetes. Proven track record in optimizing performance, increasing automation, enhancing observability, implementing efficient CI/CD practices, GEN AI productivity, mentorship and Agile (SCRUM) methodologies.
             </p>
