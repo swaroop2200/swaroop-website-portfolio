@@ -9,7 +9,7 @@ export const BackgroundPattern = () => {
           {[...Array(20)].map((_, i) => (
             <motion.div
               key={i}
-              className="absolute rounded-full bg-gradient-to-br from-purple-300/30 to-blue-300/30"
+              className="absolute rounded-full bg-gradient-to-br from-purple-300/20 to-blue-300/20"
               style={{
                 width: Math.random() * 200 + 50,
                 height: Math.random() * 200 + 50,
