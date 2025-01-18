@@ -3,15 +3,19 @@ import { About } from "@/components/About";
 import { Skills } from "@/components/Skills";
 import { Experience } from "@/components/Experience";
 import { Education } from "@/components/Education";
+import { BackgroundPattern } from "@/components/BackgroundPattern";
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-b from-white to-gray-50">
-      <Hero />
-      <About />
-      <Skills />
-      <Experience />
-      <Education />
+    <div className="relative min-h-screen">
+      <BackgroundPattern />
+      <div className="relative z-10">
+        <Hero />
+        <About />
+        <Skills />
+        <Experience />
+        <Education />
+      </div>
     </div>
   );
 };
