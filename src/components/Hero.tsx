@@ -26,7 +26,7 @@ export const Hero = () => {
             Swaroop Astakar Shekar
           </h1>
           <p className="text-lg md:text-xl text-gray-700 max-w-2xl mx-auto">
-            Software Development Engineer at Walmart
+            Software Development Engineer
           </p>
         </motion.div>
 
