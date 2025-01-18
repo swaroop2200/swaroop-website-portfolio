@@ -22,7 +22,7 @@ export const Education = () => {
           transition={{ delay: 0.2, duration: 0.5 }}
           viewport={{ once: true }}
         >
-          <Card className="p-6 backdrop-blur-sm bg-white/50 border border-gray-200 hover:bg-pink-100/80 hover:border-pink-200 transform hover:-translate-y-1 transition-all duration-300">
+          <Card className="p-6 bg-white border border-gray-200 hover:bg-pink-100 hover:border-pink-200 transform hover:-translate-y-1 transition-all duration-300">
             <div className="flex flex-col sm:flex-row sm:justify-between sm:items-start gap-4">
               <div>
                 <h3 className="text-xl font-semibold text-gray-900">PES University</h3>
