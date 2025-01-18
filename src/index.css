@@ -35,3 +35,18 @@
     @apply bg-white;
   }
 }
+
+@keyframes pattern-move {
+  0% {
+    transform: translateY(-20%) rotate(-6deg);
+  }
+  100% {
+    transform: translateY(20%) rotate(-6deg);
+  }
+}
+
+@layer utilities {
+  .animate-pattern-move {
+    animation: pattern-move 60s linear infinite;
+  }
+}
