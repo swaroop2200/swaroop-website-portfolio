@@ -1,41 +1,28 @@
-import React from 'react';
+import { motion } from "framer-motion";
 
 export const BackgroundPattern = () => {
   return (
-    <div className="fixed inset-0 -z-10 overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-br from-white to-gray-50">
-        {[...Array(3)].map((_, i) => (
-          <div
-            key={i}
-            className="absolute inset-0 opacity-10"
-            style={{
-              background: `
-                linear-gradient(
-                  to right,
-                  transparent,
-                  rgba(125, 125, 125, 0.05) 25%,
-                  transparent 50%
-                )
-              `,
-              backgroundSize: '200% 100%',
-              animation: `wave ${15 + i * 5}s linear infinite`,
-              top: `${i * 33}%`,
-            }}
-          />
-        ))}
+    <div className="fixed inset-0 -z-10 h-full w-full">
+      <div className="relative h-full w-full">
+        <motion.div
+          className="absolute inset-0 bg-gradient-to-br from-blue-50 via-pink-50 to-purple-50"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 1 }}
+        />
+        <div 
+          className="absolute inset-0 bg-[radial-gradient(circle_500px_at_50%_200px,#C9EBFF,transparent)]"
+          style={{ mixBlendMode: "multiply" }}
+        />
+        <div 
+          className="absolute inset-0 bg-[radial-gradient(circle_500px_at_80%_80%,#FDE1D3,transparent)]"
+          style={{ mixBlendMode: "multiply" }}
+        />
+        <div 
+          className="absolute inset-0 bg-[radial-gradient(circle_500px_at_20%_50%,#E5DEFF,transparent)]"
+          style={{ mixBlendMode: "multiply" }}
+        />
       </div>
-      <style>
-        {`
-          @keyframes wave {
-            0% {
-              background-position: 100% 0;
-            }
-            100% {
-              background-position: -100% 0;
-            }
-          }
-        `}
-      </style>
     </div>
   );
 };
