@@ -13,7 +13,7 @@ export const Hero = () => {
           className="text-center mb-8"
         >
           <div className="mb-8 flex justify-center">
-            <div className="w-56 h-56 rounded-full p-1 bg-blue-100 shadow-xl">
+            <div className="w-64 h-64 rounded-full p-1 bg-blue-100 shadow-xl">
               <img
                 src="/lovable-uploads/364f415c-0044-484d-be9b-78bc889987b3.png"
                 alt="Swaroop Astakar Shekar"
@@ -105,7 +105,11 @@ export const Hero = () => {
           >
             <Card className="p-4 backdrop-blur-sm bg-white/50 border border-gray-200 hover:bg-gray-50 hover:border-gray-200 transform hover:-translate-y-1 transition-all duration-300 cursor-pointer h-full">
               <div className="flex items-center gap-3">
-                <Code2 className="w-5 h-5 text-orange-500 flex-shrink-0" />
+                <img 
+                  src="https://leetcode.com/_next/static/images/logo-dark-c96c407d175e36c81e236fcfdd682a0b.png" 
+                  alt="LeetCode"
+                  className="w-5 h-5 object-contain flex-shrink-0"
+                />
                 <div className="flex-grow">
                   <p className="text-sm text-gray-600">LeetCode</p>
                   <p className="font-medium text-gray-800">View my profile</p>
