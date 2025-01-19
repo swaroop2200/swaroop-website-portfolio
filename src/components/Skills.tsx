@@ -65,13 +65,13 @@ export const Skills = () => {
               transition={{ delay: index * 0.1, duration: 0.5 }}
               viewport={{ once: true }}
             >
-              <Card className="p-6 h-full backdrop-blur-sm bg-white/50 border border-gray-200 hover:bg-pink-100/80 hover:border-pink-200 transform hover:-translate-y-1 transition-all duration-300">
+              <Card className="p-6 h-full bg-white border border-gray-200 hover:bg-pink-100 hover:border-pink-200 transform hover:-translate-y-1 transition-all duration-300">
                 <h3 className="text-xl font-semibold mb-4 text-gray-900">{category.title}</h3>
                 <div className="flex flex-wrap gap-2">
                   {category.skills.map((skill) => (
                     <span
                       key={skill}
-                      className="px-3 py-1 bg-gray-100 rounded-full text-sm text-gray-700 hover:bg-gray-700 hover:text-white transition-colors"
+                      className="px-3 py-1 bg-gray-100 rounded-full text-sm text-gray-700 hover:bg-gray-200 transition-colors"
                     >
                       {skill}
                     </span>
@@ -88,7 +88,7 @@ export const Skills = () => {
           transition={{ delay: 0.2, duration: 0.5 }}
           viewport={{ once: true }}
         >
-          <Card className="p-6 backdrop-blur-sm bg-white/50 border border-gray-200 hover:bg-pink-100/80 hover:border-pink-200 transform hover:-translate-y-1 transition-all duration-300">
+          <Card className="p-6 bg-white border border-gray-200 hover:bg-pink-100 hover:border-pink-200 transform hover:-translate-y-1 transition-all duration-300">
             <h3 className="text-xl font-semibold mb-6 text-gray-900">Developer Tools & Technologies</h3>
             <div className="space-y-4">
               {Object.entries(devTools).map(([category, tools]) => (
@@ -98,7 +98,7 @@ export const Skills = () => {
                     {tools.map((tool) => (
                       <span
                         key={tool}
-                        className="px-3 py-1 bg-gray-100 rounded-full text-sm text-gray-700 hover:bg-gray-700 hover:text-white transition-colors"
+                        className="px-3 py-1 bg-gray-100 rounded-full text-sm text-gray-700 hover:bg-gray-200 transition-colors"
                       >
                         {tool}
                       </span>
