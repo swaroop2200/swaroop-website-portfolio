@@ -24,16 +24,18 @@ export const BackgroundPattern = () => {
           />
         ))}
       </div>
-      <style jsx>{`
-        @keyframes wave {
-          0% {
-            background-position: 100% 0;
+      <style>
+        {`
+          @keyframes wave {
+            0% {
+              background-position: 100% 0;
+            }
+            100% {
+              background-position: -100% 0;
+            }
           }
-          100% {
-            background-position: -100% 0;
-          }
-        }
-      `}</style>
+        `}
+      </style>
     </div>
   );
 };
