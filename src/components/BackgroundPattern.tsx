@@ -16,7 +16,7 @@ export const BackgroundPattern = () => {
             linear-gradient(to right, rgba(147, 197, 253, 0.1) 1px, transparent 1px),
             linear-gradient(to bottom, rgba(147, 197, 253, 0.1) 1px, transparent 1px)
           `,
-          backgroundSize: '50px 50px',
+          backgroundSize: '25px 25px',
         }}
       />
     </div>

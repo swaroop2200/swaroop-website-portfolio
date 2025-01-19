@@ -47,6 +47,6 @@
 
 @layer utilities {
   .animate-pattern-move {
-    animation: pattern-move 60s linear infinite;
+    animation: pattern-move 30s linear infinite;
   }
 }
