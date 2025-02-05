@@ -1,8 +1,12 @@
 import { motion } from "framer-motion";
 import { Card } from "./ui/card";
-import { Linkedin, Github, MapPin, Mail, Phone, Code2, Link } from "lucide-react";
+import { Linkedin, Github, MapPin, Mail, Phone, Link } from "lucide-react";
+import { TypeWriter } from "./TypeWriter";
+import { useState } from "react";
 
 export const Hero = () => {
+  const [showTitle, setShowTitle] = useState(false);
+
   return (
     <section className="min-h-screen flex items-center justify-center py-20 px-4">
       <div className="max-w-6xl mx-auto w-full">
@@ -22,11 +26,20 @@ export const Hero = () => {
               />
             </div>
           </div>
-          <h1 className="text-4xl md:text-6xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-gray-900 to-gray-600">
-            Swaroop Astakar Shekar
+          <h1 className="text-4xl md:text-6xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-gray-900 to-gray-600 min-h-[60px] md:min-h-[80px]">
+            <TypeWriter 
+              text="Swaroop Astakar Shekar" 
+              delay={150}
+              onComplete={() => setShowTitle(true)}
+            />
           </h1>
-          <p className="text-lg md:text-xl text-gray-700 max-w-2xl mx-auto">
-            Software Development Engineer
+          <p className="text-lg md:text-xl text-gray-700 max-w-2xl mx-auto min-h-[30px] md:min-h-[36px]">
+            {showTitle && (
+              <TypeWriter 
+                text="Software Development Engineer" 
+                delay={100}
+              />
+            )}
           </p>
         </motion.div>
 
