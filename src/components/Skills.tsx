@@ -2,14 +2,14 @@ import { motion } from "framer-motion";
 import { Card } from "./ui/card";
 
 const devTools = {
-  "OS": ["Windows", "Mac OS", "Linux"],
-  "VCS": ["Git", "GitHub", "BitBucket"],
+  "Operating Systems": ["Windows", "Mac OS", "Linux"],
+  "Version Control System": ["Git", "GitHub", "BitBucket"],
   "Cloud": ["AWS", "Azure"],
   "Database": ["Azure SQL", "RDS", "S3", "CosmosDB", "DynamoDB"],
   "Messaging": ["ActiveMQ", "Kafka", "Event Hub", "SQS"],
   "Security": ["AD", "IAM", "Service Registry", "SSL"],
   "Cache": ["Guava", "Redis", "MemCache"],
-  "Containerization": ["K8s", "Docker"],
+  "Containerization": ["Kubernetes", "Docker"],
   "CI/CD": ["GitOps", "Jenkins"],
   "Observability": ["Prometheus", "Grafana", "CloudWatch", "Splunk", "Open Observe"],
   "Build Tools": ["Brazil", "Maven", "Ant", "Gradle"],
@@ -98,7 +98,7 @@ export const Skills = () => {
                     {tools.map((tool) => (
                       <span
                         key={tool}
-                        className="px-3 py-1 bg-gray-100 rounded-full text-sm text-gray-700 hover:bg-gray-200 transition-colors"
+                        className="px-3 py-1 bg-gray-100 rounded-full text-sm md:text-base text-gray-700 hover:bg-gray-200 transition-colors"
                       >
                         {tool}
                       </span>
