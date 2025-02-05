@@ -24,7 +24,9 @@ export const About = () => {
         >
           <Card className="p-8 bg-white border border-gray-200 hover:bg-pink-100 hover:border-pink-200 transform hover:-translate-y-1 transition-all duration-300">
             <p className="text-gray-600 leading-relaxed">
-              Pragmatic, customer-centric Software Engineer with 4 years of experience in designing and developing scalable back-end systems on AWS, Azure, and Kubernetes. Proven track record in optimizing performance, increasing automation, enhancing observability, implementing efficient CI/CD practices, GEN AI productivity, mentorship and Agile (SCRUM) methodologies.
+              As a Software Engineer with four years of experience across retail industry giants like Walmart and Amazon, financial leader Morgan Stanley, and a dynamic startup environment, I bring a robust background in building and optimizing scalable backend systems on the cloud (AWS, Azure, GCP). I have successfully contributed to high-impact projects such as Walmart's Sam's Club Omni Returns, Amazon's Local Shop, and Morgan Stanley's portfolio management solutions, where I've been recognized for enhancing system efficiency and customer experience.
+              <br /><br />
+              With a track record of driving GEN AI productivity, streamlining SDLC practices, and aligning technical solutions with business needs, I am excited to contribute my expertise to innovative engineering teams.
             </p>
           </Card>
         </motion.div>

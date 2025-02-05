@@ -66,8 +66,8 @@ export const Skills = () => {
               viewport={{ once: true }}
             >
               <Card className="p-6 h-full bg-white border border-gray-200 hover:bg-pink-100 hover:border-pink-200 transform hover:-translate-y-1 transition-all duration-300">
-                <h3 className="text-xl font-semibold mb-4 text-gray-900">{category.title}</h3>
-                <div className="flex flex-wrap gap-2">
+                <h3 className="text-xl font-semibold mb-4 text-gray-900 text-center">{category.title}</h3>
+                <div className="flex flex-wrap gap-2 justify-center">
                   {category.skills.map((skill) => (
                     <span
                       key={skill}
@@ -89,12 +89,12 @@ export const Skills = () => {
           viewport={{ once: true }}
         >
           <Card className="p-6 bg-white border border-gray-200 hover:bg-pink-100 hover:border-pink-200 transform hover:-translate-y-1 transition-all duration-300">
-            <h3 className="text-xl font-semibold mb-6 text-gray-900">Developer Tools & Technologies</h3>
+            <h3 className="text-xl font-semibold mb-6 text-gray-900 text-center">Developer Tools & Technologies</h3>
             <div className="space-y-4">
               {Object.entries(devTools).map(([category, tools]) => (
-                <div key={category} className="space-y-2">
+                <div key={category} className="space-y-2 text-center">
                   <p className="font-medium text-gray-900">{category}</p>
-                  <div className="flex flex-wrap gap-2">
+                  <div className="flex flex-wrap gap-2 justify-center">
                     {tools.map((tool) => (
                       <span
                         key={tool}

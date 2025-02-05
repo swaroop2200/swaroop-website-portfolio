@@ -29,7 +29,7 @@
 
 @layer base {
   * {
-    @apply border-border;
+    @apply border-border font-inter;
   }
   body {
     @apply bg-white;
@@ -47,6 +47,6 @@
 
 @layer utilities {
   .animate-pattern-move {
-    animation: pattern-move 30s linear infinite;
+    animation: pattern-move 15s linear infinite;
   }
 }
