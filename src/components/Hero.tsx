@@ -6,6 +6,8 @@ import { useState } from "react";
 
 export const Hero = () => {
   const [showTitle, setShowTitle] = useState(false);
+  const [isNameComplete, setIsNameComplete] = useState(false);
+  const [isTitleComplete, setIsTitleComplete] = useState(false);
 
   return (
     <section className="min-h-screen flex items-center justify-center py-20 px-4">
@@ -30,7 +32,10 @@ export const Hero = () => {
             <TypeWriter 
               text="Swaroop Astakar Shekar" 
               delay={150}
-              onComplete={() => setShowTitle(true)}
+              onComplete={() => {
+                setShowTitle(true);
+                setIsNameComplete(true);
+              }}
             />
           </h1>
           <p className="text-lg md:text-xl text-gray-700 max-w-2xl mx-auto min-h-[30px] md:min-h-[36px]">
@@ -38,6 +43,7 @@ export const Hero = () => {
               <TypeWriter 
                 text="Software Development Engineer" 
                 delay={100}
+                onComplete={() => setIsTitleComplete(true)}
               />
             )}
           </p>

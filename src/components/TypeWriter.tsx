@@ -10,6 +10,7 @@ interface TypeWriterProps {
 export const TypeWriter = ({ text, delay = 100, className = "", onComplete }: TypeWriterProps) => {
   const [currentText, setCurrentText] = useState('');
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [isComplete, setIsComplete] = useState(false);
 
   useEffect(() => {
     if (currentIndex < text.length) {
@@ -19,15 +20,18 @@ export const TypeWriter = ({ text, delay = 100, className = "", onComplete }: Ty
       }, delay);
 
       return () => clearTimeout(timeout);
-    } else if (onComplete) {
-      onComplete();
+    } else {
+      setIsComplete(true);
+      if (onComplete) {
+        onComplete();
+      }
     }
   }, [currentIndex, delay, text, onComplete]);
 
   return (
     <span className={className}>
       {currentText}
-      <span className="animate-pulse">|</span>
+      {!isComplete && <span className="animate-pulse">|</span>}
     </span>
   );
 };
