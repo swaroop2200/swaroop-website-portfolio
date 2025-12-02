@@ -10,12 +10,21 @@ import { useState } from "react";
 
 const experiences = [
   {
+    company: "Zalando",
+    logo: "/lovable-uploads/zalando-logo.png",
+    role: "Software Development Engineer",
+    period: "Jun 2025 - Present",
+    location: "Berlin, Germany",
+    description: "Part of the Post-Sales Order team, powering returns and refunds for millions of Zalando customers across Europe. Leading key Returns Transformation initiatives — migrating from offline to online returns for all Zalando fulfilled deliveries, and uplifting return services from Tier-2 to Tier-1, improving reliability and customer experience. Developing the Online Returns Cancellation feature, enabling customers to cancel items after announcing a return, reducing customer support load and ensuring accurate accounting transactions on the SAP side. Contributing to on-call operations, handling incidents and post mortems, and serving as Team Champion, supporting cross-team queries and acting as a bridge between product managers and engineering. Early adopter of AI coding assistance, building workflows automating repetitive ops tasks and sharing best practices through team sessions.",
+    techStack: "Tech Stack: Kotlin, Java, Python, Nakadi, Vert.x, CDP, PostgreSQL, Kubernetes, AWS"
+  },
+  {
     company: "Walmart",
     logo: "/lovable-uploads/eec3ebfb-8def-4a17-8401-eedb0d75986b.png",
     role: "Software Development Engineer 3",
-    period: "Apr 2023 - Present",
+    period: "Apr 2023 - May 2025",
     location: "Bangalore, India",
-    description: "At Walmart, I am a key contributor to the development of Elvis, Sam's Club's Omni Returns platform, which handles both online and in-club returns, processing over 70k returns daily. I've led efforts to integrate FedEx for online returns, enabling seamless return tracking to distribution centers and managing 20k online returns per day. I also developed critical workflows for online replacements, processing 5k replacements daily. My focus has been on building asynchronous event-driven flows for invoices, receipts, settlements, and shipment tracking. Additionally, I contributed to platform improvements like graceful pod shutdowns, distributed order locking, and concurrent order processing to enhance performance and resilience. For my contributions, I received the Bravo Award for driving significant impact and innovation.",
+    description: "At Walmart, I was a key contributor to the development of Elvis, Sam's Club's Omni Returns platform, which handles both online and in-club returns, processing over 70k returns daily. I led efforts to integrate FedEx for online returns, enabling seamless return tracking to distribution centers and managing 20k online returns per day. I also developed critical workflows for online replacements, processing 5k replacements daily. My focus was on building asynchronous event-driven flows for invoices, receipts, settlements, and shipment tracking. Additionally, I contributed to platform improvements like graceful pod shutdowns, distributed order locking, and concurrent order processing to enhance performance and resilience. For my contributions, I received the Bravo Award for driving significant impact and innovation.",
     techStack: "Tech Stack: Azure, Java, Python, Kubernetes, Spring, Kafka, ActiveMQ, Azure SQL, Apache Camel, MemCache"
   },
   {
