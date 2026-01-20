@@ -55,7 +55,7 @@ export const Hero = () => {
           transition={{ delay: 0.2, duration: 0.5 }}
           className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mt-8"
         >
-          <Card className="p-4 backdrop-blur-sm bg-white/50 border border-gray-200">
+          <Card className="p-4 backdrop-blur-md bg-white/80 border border-gray-200/50 shadow-lg hover:shadow-xl hover:shadow-blue-100/50 hover:border-blue-200/50 hover:bg-gradient-to-br hover:from-white hover:to-blue-50/30 transform hover:-translate-y-1 hover:scale-[1.02] transition-all duration-300">
             <div className="flex items-center gap-3">
               <MapPin className="w-5 h-5 text-gray-600 flex-shrink-0" />
               <div>
@@ -64,7 +64,7 @@ export const Hero = () => {
               </div>
             </div>
           </Card>
-          <Card className="p-4 backdrop-blur-sm bg-white/50 border border-gray-200">
+          <Card className="p-4 backdrop-blur-md bg-white/80 border border-gray-200/50 shadow-lg hover:shadow-xl hover:shadow-blue-100/50 hover:border-blue-200/50 hover:bg-gradient-to-br hover:from-white hover:to-blue-50/30 transform hover:-translate-y-1 hover:scale-[1.02] transition-all duration-300">
             <div className="flex items-center gap-3">
               <Mail className="w-5 h-5 text-gray-600 flex-shrink-0" />
               <div className="min-w-0">
@@ -73,7 +73,7 @@ export const Hero = () => {
               </div>
             </div>
           </Card>
-          <Card className="p-4 backdrop-blur-sm bg-white/50 border border-gray-200">
+          <Card className="p-4 backdrop-blur-md bg-white/80 border border-gray-200/50 shadow-lg hover:shadow-xl hover:shadow-blue-100/50 hover:border-blue-200/50 hover:bg-gradient-to-br hover:from-white hover:to-blue-50/30 transform hover:-translate-y-1 hover:scale-[1.02] transition-all duration-300">
             <div className="flex items-center gap-3">
               <Phone className="w-5 h-5 text-gray-600 flex-shrink-0" />
               <div>
@@ -88,7 +88,7 @@ export const Hero = () => {
             rel="noopener noreferrer"
             className="sm:col-span-1"
           >
-            <Card className="p-4 backdrop-blur-sm bg-white/50 border border-gray-200 hover:bg-blue-50 hover:border-blue-200 transform hover:-translate-y-1 transition-all duration-300 cursor-pointer h-full">
+            <Card className="p-4 backdrop-blur-md bg-white/80 border border-gray-200/50 shadow-lg hover:shadow-xl hover:shadow-blue-100/50 hover:border-blue-200/50 hover:bg-gradient-to-br hover:from-white hover:to-blue-50/30 transform hover:-translate-y-1 hover:scale-[1.02] transition-all duration-300 cursor-pointer h-full">
               <div className="flex items-center gap-3">
                 <Linkedin className="w-5 h-5 text-blue-600 flex-shrink-0" />
                 <div className="flex-grow">
@@ -105,7 +105,7 @@ export const Hero = () => {
             rel="noopener noreferrer"
             className="sm:col-span-1"
           >
-            <Card className="p-4 backdrop-blur-sm bg-white/50 border border-gray-200 hover:bg-gray-50 hover:border-gray-200 transform hover:-translate-y-1 transition-all duration-300 cursor-pointer h-full">
+            <Card className="p-4 backdrop-blur-md bg-white/80 border border-gray-200/50 shadow-lg hover:shadow-xl hover:shadow-gray-200/50 hover:border-gray-300/50 hover:bg-gradient-to-br hover:from-white hover:to-gray-50/30 transform hover:-translate-y-1 hover:scale-[1.02] transition-all duration-300 cursor-pointer h-full">
               <div className="flex items-center gap-3">
                 <Github className="w-5 h-5 text-gray-800 flex-shrink-0" />
                 <div className="flex-grow">
@@ -122,7 +122,7 @@ export const Hero = () => {
             rel="noopener noreferrer"
             className="sm:col-span-1"
           >
-            <Card className="p-4 backdrop-blur-sm bg-white/50 border border-gray-200 hover:bg-gray-50 hover:border-gray-200 transform hover:-translate-y-1 transition-all duration-300 cursor-pointer h-full">
+            <Card className="p-4 backdrop-blur-md bg-white/80 border border-gray-200/50 shadow-lg hover:shadow-xl hover:shadow-orange-100/50 hover:border-orange-200/50 hover:bg-gradient-to-br hover:from-white hover:to-orange-50/30 transform hover:-translate-y-1 hover:scale-[1.02] transition-all duration-300 cursor-pointer h-full">
               <div className="flex items-center gap-3">
                 <img 
                   src="https://leetcode.com/_next/static/images/logo-dark-c96c407d175e36c81e236fcfdd682a0b.png" 

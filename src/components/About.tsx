@@ -22,7 +22,7 @@ export const About = () => {
           transition={{ delay: 0.2, duration: 0.5 }}
           viewport={{ once: true }}
         >
-          <Card className="p-8 bg-white border border-gray-200 hover:bg-pink-100 hover:border-pink-200 transform hover:-translate-y-1 transition-all duration-300">
+          <Card className="p-8 backdrop-blur-md bg-white/80 border border-gray-200/50 shadow-lg hover:shadow-xl hover:shadow-blue-100/50 hover:border-blue-200/50 hover:bg-gradient-to-br hover:from-white hover:to-blue-50/30 transform hover:-translate-y-1 hover:scale-[1.01] transition-all duration-300">
             <p className="text-gray-600 leading-relaxed">
               As a Software Engineer with four years of experience across retail industry giants like Walmart and Amazon, financial leader Morgan Stanley, and a dynamic startup environment, I bring a robust background in building and optimizing scalable backend systems on the cloud (AWS, Azure, GCP). I have successfully contributed to high-impact projects such as Walmart's Sam's Club Omni Returns, Amazon's Local Shop, and Morgan Stanley's portfolio management solutions, where I've been recognized for enhancing system efficiency and customer experience.
               <br /><br />
