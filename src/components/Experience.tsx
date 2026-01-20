@@ -94,9 +94,9 @@ export const Experience = () => {
                 open={openItems.includes(exp.company)}
                 onOpenChange={() => toggleItem(exp.company)}
               >
-                <Card className="overflow-hidden transition-all duration-300 hover:bg-pink-100 hover:border-pink-200 transform hover:-translate-y-1">
+                <Card className="overflow-hidden backdrop-blur-md bg-white/80 border border-gray-200/50 shadow-lg hover:shadow-xl hover:shadow-blue-100/50 hover:border-blue-200/50 hover:bg-gradient-to-br hover:from-white hover:to-blue-50/30 transform hover:-translate-y-1 hover:scale-[1.01] transition-all duration-300">
                   <CollapsibleTrigger className="w-full">
-                    <div className="p-6 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 bg-white transition-colors duration-300">
+                    <div className="p-6 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 bg-transparent transition-colors duration-300">
                       <div className="flex items-center gap-4">
                         <img 
                           src={exp.logo} 
@@ -125,7 +125,7 @@ export const Experience = () => {
                     </div>
                   </CollapsibleTrigger>
                   <CollapsibleContent>
-                    <div className="px-6 pb-6 space-y-4 border-t border-gray-100 bg-white">
+                    <div className="px-6 pb-6 space-y-4 border-t border-gray-100/50 bg-transparent">
                       <p className="text-gray-700 leading-relaxed mt-4">{exp.description}</p>
                       <p className="text-gray-700 font-medium">{exp.techStack}</p>
                     </div>
