@@ -1,12 +1,6 @@
 import { motion } from "framer-motion";
 import { Card } from "./ui/card";
 import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger,
-} from "./ui/accordion";
-import {
   Cloud,
   Database,
   MessageSquare,
@@ -25,17 +19,17 @@ import {
 const devTools = [
   { category: "Operating Systems", icon: Monitor, tools: ["Windows", "Mac OS", "Linux"], color: "bg-slate-100 text-slate-700 hover:bg-slate-200" },
   { category: "Version Control", icon: GitMerge, tools: ["Git", "GitHub", "BitBucket"], color: "bg-orange-100 text-orange-700 hover:bg-orange-200" },
-  { category: "Cloud", icon: Cloud, tools: ["AWS", "Azure"], color: "bg-blue-100 text-blue-700 hover:bg-blue-200" },
-  { category: "Database", icon: Database, tools: ["Azure SQL", "RDS", "S3", "CosmosDB", "DynamoDB"], color: "bg-green-100 text-green-700 hover:bg-green-200" },
+  { category: "Cloud", icon: Cloud, tools: ["AWS", "Azure", "GCP"], color: "bg-blue-100 text-blue-700 hover:bg-blue-200" },
+  { category: "Database", icon: Database, tools: ["Azure SQL", "RDS", "S3", "CosmosDB", "DynamoDB", "Postgres", "Cassandra"], color: "bg-green-100 text-green-700 hover:bg-green-200" },
   { category: "Messaging", icon: MessageSquare, tools: ["ActiveMQ", "Kafka", "Event Hub", "SQS"], color: "bg-purple-100 text-purple-700 hover:bg-purple-200" },
-  { category: "Security", icon: Shield, tools: ["AD", "IAM", "Service Registry", "SSL"], color: "bg-red-100 text-red-700 hover:bg-red-200" },
+  { category: "Security", icon: Shield, tools: ["AD", "IAM", "Service Registry", "SSL", "Akeyless"], color: "bg-red-100 text-red-700 hover:bg-red-200" },
   { category: "Cache", icon: Zap, tools: ["Guava", "Redis", "MemCache"], color: "bg-yellow-100 text-yellow-700 hover:bg-yellow-200" },
-  { category: "Containerization", icon: Container, tools: ["Kubernetes", "Docker"], color: "bg-cyan-100 text-cyan-700 hover:bg-cyan-200" },
+  { category: "Containerization", icon: Container, tools: ["Kubernetes", "Docker", "Podman"], color: "bg-cyan-100 text-cyan-700 hover:bg-cyan-200" },
   { category: "CI/CD", icon: GitBranch, tools: ["GitOps", "Jenkins"], color: "bg-indigo-100 text-indigo-700 hover:bg-indigo-200" },
   { category: "Observability", icon: Eye, tools: ["Prometheus", "Grafana", "CloudWatch", "Splunk", "Open Observe"], color: "bg-teal-100 text-teal-700 hover:bg-teal-200" },
   { category: "Build Tools", icon: Wrench, tools: ["Brazil", "Maven", "Ant", "Gradle"], color: "bg-amber-100 text-amber-700 hover:bg-amber-200" },
-  { category: "Gen AI", icon: Sparkles, tools: ["Azure OpenAI"], color: "bg-pink-100 text-pink-700 hover:bg-pink-200" },
-  { category: "IDE", icon: Code, tools: ["VS Code", "IntelliJ"], color: "bg-violet-100 text-violet-700 hover:bg-violet-200" },
+  { category: "Gen AI", icon: Sparkles, tools: ["Azure OpenAI", "Claude Code", "OpenAI SDK", "GenAI"], color: "bg-pink-100 text-pink-700 hover:bg-pink-200" },
+  { category: "IDE", icon: Code, tools: ["VS Code", "IntelliJ", "Cursor"], color: "bg-violet-100 text-violet-700 hover:bg-violet-200" },
 ];
 
 const skillCategories = [
@@ -119,38 +113,31 @@ export const Skills = () => {
             <h3 className="text-xl font-semibold mb-6 text-gray-900 text-center">
               Developer Tools & Technologies
             </h3>
-            <Accordion type="multiple" className="w-full">
-              {devTools.map((item, index) => {
+            <div className="space-y-4">
+              {devTools.map((item) => {
                 const IconComponent = item.icon;
                 return (
-                  <AccordionItem key={item.category} value={item.category} className="border-b border-gray-100/50">
-                    <AccordionTrigger className="hover:no-underline py-3 px-2 rounded-lg hover:bg-gray-50/50 transition-colors">
-                      <div className="flex items-center gap-3">
-                        <div className={`p-2 rounded-lg ${item.color.split(' ')[0]}`}>
-                          <IconComponent className={`w-4 h-4 ${item.color.split(' ')[1]}`} />
-                        </div>
-                        <span className="font-medium text-gray-800">{item.category}</span>
-                        <span className="text-xs text-gray-500 bg-gray-100 px-2 py-0.5 rounded-full">
-                          {item.tools.length}
+                  <div key={item.category} className="flex flex-col sm:flex-row sm:items-center gap-3">
+                    <div className="flex items-center gap-2 min-w-[160px]">
+                      <div className={`p-1.5 rounded-lg ${item.color.split(' ')[0]}`}>
+                        <IconComponent className={`w-4 h-4 ${item.color.split(' ')[1]}`} />
+                      </div>
+                      <span className="font-medium text-gray-800 text-sm">{item.category}</span>
+                    </div>
+                    <div className="flex flex-wrap gap-2">
+                      {item.tools.map((tool) => (
+                        <span
+                          key={tool}
+                          className={`px-3 py-1 rounded-full text-sm ${item.color} transition-all duration-200 cursor-default hover:scale-105`}
+                        >
+                          {tool}
                         </span>
-                      </div>
-                    </AccordionTrigger>
-                    <AccordionContent>
-                      <div className="flex flex-wrap gap-2 pt-2 pb-3 pl-12">
-                        {item.tools.map((tool) => (
-                          <span
-                            key={tool}
-                            className={`px-3 py-1.5 rounded-full text-sm ${item.color} transition-all duration-200 cursor-default hover:scale-105`}
-                          >
-                            {tool}
-                          </span>
-                        ))}
-                      </div>
-                    </AccordionContent>
-                  </AccordionItem>
+                      ))}
+                    </div>
+                  </div>
                 );
               })}
-            </Accordion>
+            </div>
           </Card>
         </motion.div>
       </div>
