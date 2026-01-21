@@ -17,19 +17,19 @@ import {
 } from "lucide-react";
 
 const devTools = [
-  { category: "Operating Systems", icon: Monitor, tools: ["Windows", "Mac OS", "Linux"], color: "bg-slate-100 text-slate-700 hover:bg-slate-200" },
-  { category: "Version Control", icon: GitMerge, tools: ["Git", "GitHub", "BitBucket"], color: "bg-orange-100 text-orange-700 hover:bg-orange-200" },
-  { category: "Cloud", icon: Cloud, tools: ["AWS", "Azure", "GCP"], color: "bg-blue-100 text-blue-700 hover:bg-blue-200" },
-  { category: "Database", icon: Database, tools: ["Azure SQL", "RDS", "S3", "CosmosDB", "DynamoDB", "Postgres", "Cassandra"], color: "bg-green-100 text-green-700 hover:bg-green-200" },
-  { category: "Messaging", icon: MessageSquare, tools: ["ActiveMQ", "Kafka", "Event Hub", "SQS"], color: "bg-purple-100 text-purple-700 hover:bg-purple-200" },
-  { category: "Security", icon: Shield, tools: ["AD", "IAM", "Service Registry", "SSL", "Akeyless"], color: "bg-red-100 text-red-700 hover:bg-red-200" },
-  { category: "Cache", icon: Zap, tools: ["Guava", "Redis", "MemCache"], color: "bg-yellow-100 text-yellow-700 hover:bg-yellow-200" },
-  { category: "Containerization", icon: Container, tools: ["Kubernetes", "Docker", "Podman"], color: "bg-cyan-100 text-cyan-700 hover:bg-cyan-200" },
-  { category: "CI/CD", icon: GitBranch, tools: ["GitOps", "Jenkins"], color: "bg-indigo-100 text-indigo-700 hover:bg-indigo-200" },
-  { category: "Observability", icon: Eye, tools: ["Prometheus", "Grafana", "CloudWatch", "Splunk", "Open Observe"], color: "bg-teal-100 text-teal-700 hover:bg-teal-200" },
-  { category: "Build Tools", icon: Wrench, tools: ["Brazil", "Maven", "Ant", "Gradle"], color: "bg-amber-100 text-amber-700 hover:bg-amber-200" },
-  { category: "Gen AI", icon: Sparkles, tools: ["Azure OpenAI", "Claude Code", "OpenAI SDK", "GenAI"], color: "bg-pink-100 text-pink-700 hover:bg-pink-200" },
-  { category: "IDE", icon: Code, tools: ["VS Code", "IntelliJ", "Cursor"], color: "bg-violet-100 text-violet-700 hover:bg-violet-200" },
+  { category: "Operating Systems", icon: Monitor, tools: ["Windows", "Mac OS", "Linux"], color: "bg-slate-100 text-slate-700 hover:bg-slate-200 border border-slate-300" },
+  { category: "Version Control", icon: GitMerge, tools: ["Git", "GitHub", "BitBucket"], color: "bg-orange-100 text-orange-700 hover:bg-orange-200 border border-orange-300" },
+  { category: "Cloud", icon: Cloud, tools: ["AWS", "Azure", "GCP"], color: "bg-blue-100 text-blue-700 hover:bg-blue-200 border border-blue-300" },
+  { category: "Database", icon: Database, tools: ["Azure SQL", "RDS", "S3", "CosmosDB", "DynamoDB", "Postgres", "Cassandra"], color: "bg-green-100 text-green-700 hover:bg-green-200 border border-green-300" },
+  { category: "Messaging", icon: MessageSquare, tools: ["ActiveMQ", "Kafka", "Event Hub", "SQS"], color: "bg-purple-100 text-purple-700 hover:bg-purple-200 border border-purple-300" },
+  { category: "Security", icon: Shield, tools: ["AD", "IAM", "Service Registry", "SSL", "Akeyless"], color: "bg-red-100 text-red-700 hover:bg-red-200 border border-red-300" },
+  { category: "Cache", icon: Zap, tools: ["Guava", "Redis", "MemCache"], color: "bg-yellow-100 text-yellow-700 hover:bg-yellow-200 border border-yellow-300" },
+  { category: "Containerization", icon: Container, tools: ["Kubernetes", "Docker", "Podman"], color: "bg-cyan-100 text-cyan-700 hover:bg-cyan-200 border border-cyan-300" },
+  { category: "CI/CD", icon: GitBranch, tools: ["GitOps", "Jenkins"], color: "bg-indigo-100 text-indigo-700 hover:bg-indigo-200 border border-indigo-300" },
+  { category: "Observability", icon: Eye, tools: ["Prometheus", "Grafana", "CloudWatch", "Splunk", "Open Observe"], color: "bg-teal-100 text-teal-700 hover:bg-teal-200 border border-teal-300" },
+  { category: "Build Tools", icon: Wrench, tools: ["Brazil", "Maven", "Ant", "Gradle"], color: "bg-amber-100 text-amber-700 hover:bg-amber-200 border border-amber-300" },
+  { category: "Gen AI", icon: Sparkles, tools: ["OpenAI", "Claude", "Langchain", "Google ADK"], color: "bg-pink-100 text-pink-700 hover:bg-pink-200 border border-pink-300" },
+  { category: "IDE", icon: Code, tools: ["VS Code", "IntelliJ", "Cursor"], color: "bg-violet-100 text-violet-700 hover:bg-violet-200 border border-violet-300" },
 ];
 
 const skillCategories = [
